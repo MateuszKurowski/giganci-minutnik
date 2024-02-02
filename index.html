@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minutnik przerwy w trakcie zajęć">
+    <meta name="keywords" content="Giganci programowania, Giganci, Minutnik, Timer">
+    <meta name="author" content="Mateusz Kurowski (kurowskimateusz04@gmail.com)">
+    <title>Przerwa!</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="icon" href="src/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="banner">
+        <img src="src/Giganci_Ekran_Blokady.jpg" alt="Baner.jpg">
+    </div>
+
+    <div>
+        <h1>Przerwa!</h1>
+    </div>
+
+    <div id="timer-container">
+        <div id="timer"></div>
+        <button id="editTimeBtn">✏️</button>
+    </div>
+
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="buttons">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="edit-content">
+                <div class="column">
+                    <label for="hoursInput">Godzina:</label>
+                    <div class="control">
+                        <span class="arrow" onclick="decreaseValue('hoursInput')" onmousedown="return false;">⬅️</span>
+                        <select id="hoursInput"></select>
+                        <span class="arrow" onclick="increaseValue('hoursInput')" onmousedown="return false;">➡️</span>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <label for="minutesInput">Minuty:</label>
+                    <div class="control">
+                        <span class="arrow" onclick="decreaseValue('minutesInput')"
+                            onmousedown="return false;">⬅️</span>
+                        <select id="minutesInput"></select>
+                        <span class="arrow" onclick="increaseValue('minutesInput')"
+                            onmousedown="return false;">➡️</span>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <label for="secondsInput">Sekundy:</label>
+                    <div class="control">
+                        <span class="arrow" onclick="decreaseValue('secondsInput')"
+                            onmousedown="return false;">⬅️</span>
+                        <select id="secondsInput"></select>
+                        <span class="arrow" onclick="increaseValue('secondsInput')"
+                            onmousedown="return false;">➡️</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button onclick="editTime()">Zapisz</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio" loop>
+        <source src="dzwonek.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <footer>
+        <p>&copy; 2024 Mateusz Kurowski | Kontakt: <a href="mailto:twoj@email.com">kurowskimateusz04@gmail.com</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+    <script src="src/script.js"></script>
+</body>
+
+</html>
