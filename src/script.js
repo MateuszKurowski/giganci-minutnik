@@ -176,53 +176,6 @@ function handleAcceptMessage() {
 	updateProgressBar()
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-	const fireworksContainer = document.getElementById('fireworks-container')
-
-	function createFirework() {
-		const firework = document.createElement('div')
-		firework.className = 'firework'
-		fireworksContainer.appendChild(firework)
-
-		const x = Math.random() * window.innerWidth
-		const y = Math.random() * window.innerHeight
-		firework.style.left = `${x}px`
-		firework.style.top = `${y}px`
-
-		firework.addEventListener('animationend', () => {
-			fireworksContainer.removeChild(firework)
-		})
-	}
-	function createSparkle() {
-		const firework = document.createElement('div')
-		firework.className = 'sparkle'
-		fireworksContainer.appendChild(firework)
-
-		const x = Math.random() * window.innerWidth
-		const y = Math.random() * window.innerHeight
-		firework.style.left = `${x}px`
-		firework.style.top = `${y}px`
-
-		firework.addEventListener('animationend', () => {
-			fireworksContainer.removeChild(firework)
-		})
-	}
-
-	function launchFireworks(interval) {
-		setInterval(createFirework, interval)
-	}
-	function launchSparkles(interval) {
-		setInterval(createSparkle, interval)
-	}
-
-	launchSparkles(750)
-	launchSparkles(350)
-	launchSparkles(650)
-	launchFireworks(1000)
-	launchFireworks(600)
-	launchFireworks(500)
-})
-
 document.getElementById('startBtn').addEventListener('click', startTimer)
 document.getElementById('stopBtn').addEventListener('click', stopTimer)
 document.getElementById('editTimeBtn').addEventListener('click', openModal)

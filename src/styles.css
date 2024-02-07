@@ -12,22 +12,21 @@ body {
 
 h1 {
 	text-align: center;
-	font-size: 46px;
+	font-size: 3rem;
 }
 
 #timer-container,
 #buttons {
 	text-align: center;
-	padding: 20px;
+	padding: 1rem;
 	position: relative;
 }
 
 #timer {
-	font-size: 150px;
-	margin-bottom: 10px;
+	font-size: 8rem;
 	border: 2px solid #333;
-	padding: 20px;
-	border-radius: 10px;
+	padding: 1rem;
+	border-radius: 0.7rem;
 	width: 70%;
 	box-sizing: border-box;
 	margin: 0 auto;
@@ -35,12 +34,12 @@ h1 {
 
 img {
 	width: 100%;
-	border-radius: 10px;
+	border-radius: 0.7rem;
 }
 
 #progress-bar-container {
 	width: 90%;
-	padding: 20px 0px;
+	padding: 1rem 0rem;
 	margin: 0 auto;
 	box-sizing: border-box;
 	background-color: #f0f0f0;
@@ -48,9 +47,9 @@ img {
 
 #progress-bar {
 	width: 0;
-	height: 20px;
+	height: 1rem;
 	background-color: #ff9307;
-	border-radius: 10px;
+	border-radius: 0.5rem;
 	transition: width 1s;
 }
 
@@ -60,15 +59,14 @@ img {
 
 #startBtn,
 #stopBtn {
-	font-size: 24px;
-	margin-top: 20px;
-	padding: 10px 20px;
+	font-size: 1.8rem;
+	margin-top: 1.5rem;
 }
 
 button {
 	background-color: #ff6424;
 	color: white;
-	padding: 10px 20px;
+	padding: 1rem 2rem;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -110,26 +108,36 @@ button {
 	justify-content: center;
 }
 
+label {
+	font-size: 2rem;
+}
+
 .column {
 	width: 25%;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.control {
+	width: 100%;
 }
 
 .control select {
 	width: 30%;
-	padding: 8px;
+	padding: 0.5rem 0rem;
 }
 
 .arrow {
 	width: 30%;
-	padding: 2px;
 	cursor: pointer;
+	line-height: 4rem;
+	font-size: 2rem;
 }
 
 .close {
 	color: #aaa;
-	font-size: 28px;
+	font-size: 4rem;
 	font-weight: bold;
 	cursor: pointer;
 	position: absolute;
@@ -155,7 +163,7 @@ button {
 	border: 0.5px dotted black;
 	border-radius: 5px;
 	cursor: pointer;
-	font-size: 24px;
+	font-size: 2rem;
 	padding: 0;
 }
 
@@ -181,4 +189,49 @@ footer {
 
 footer a {
 	color: #c71e00;
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 4px;
+	}
+	#edit-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.column {
+		width: 50%;
+		align-items: center;
+		justify-content: center;
+	}
+	.arrow {
+		font-size: 4rem;
+	}
+}
+
+/* Dla ekranów o szerokości od 601px do 1024px */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	html {
+		font-size: 8px;
+	}
+	#edit-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.column {
+		width: 50%;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* Dla ekranów o szerokości większej niż 1024px */
+@media only screen and (min-width: 1025px) {
+	html {
+		font-size: 12px;
+	}
 }
