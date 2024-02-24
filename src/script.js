@@ -144,7 +144,7 @@ function stopAudio() {
 }
 
 function showModalMessage() {
-	const availableImages = ['1.png', '2.png', '3.png', '4.jpg', '5.png', '6.jpg']
+	const availableImages = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png']
 	const randomIndex = Math.floor(Math.random() * availableImages.length)
 
 	const randomImage = availableImages[randomIndex]
