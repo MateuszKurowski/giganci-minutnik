@@ -171,7 +171,7 @@ function showModalMessage() {
 
 function handleAcceptMessage() {
 	stopAudio()
-	totalSeconds = startTime
+	totalSeconds = 0
 	updateTimerText()
 	updateProgressBar()
 }
