@@ -2,8 +2,6 @@
 
 ## Opis Projektu
 
-Projekt powstał w okresie szczytu popularności ChatGPT, w celu sprawdzenia jak radzi sobie model z programowaniem poprosiłem go o stworzenie tego projektu, kod został w 95% wygenerowany przez AI i wymagał tylko czasami małych poprawek.
-
 Jest to projekt utworzony specjalnie na moje zajecia stacjonarne dla uczniów w Gigantach Programowania. Ten mini projekt powstał z myślą o krótkich przerwach podczas intensywnych zajęć programowania, aby dostarczyć chwilę rozluźnienia i motywacji. Usprawnia proces przerwy i czyni go jeszcze przyjemniejszym. Zwłaszcza gdy uczniowie mogą wybrać dźwięk dzwonka inny na każde zajęcia.
 
 ## Funkcje
